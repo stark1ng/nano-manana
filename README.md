@@ -65,6 +65,10 @@ The **API Pocket** (or simply "Pocket") provides a centralized way to manage all
 
 > **Tip**: The API Pocket allows you to manage multiple API keys and switch between them easily without re-entering credentials each time.
 
+## Поддержать проект
+[![Buy Me a Ko-fi](https://ko-fi.com/api/ko-fi-button.png)](https://ko-fi.com/firststarking)
+
+
 ## � License
 
 Nano Manana is distributed as **Freeware**. It is free to download and use for personal and commercial purposes. 
