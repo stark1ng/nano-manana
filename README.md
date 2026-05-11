@@ -66,8 +66,24 @@ The **API Pocket** (or simply "Pocket") provides a centralized way to manage all
 > **Tip**: The API Pocket allows you to manage multiple API keys and switch between them easily without re-entering credentials each time.
 
 ## Support Project
-[![Buy Me a Ko-fi](https://storage.ko-fi.com/cdn/logomarkLogo.png)](https://ko-fi.com/firststarking)
 
+<p>
+  Neural networks are expensive to test and develop. If this project has been helpful to you, please consider supporting it.
+</p>
+
+<p>
+  <a href="https://ko-fi.com/firststarking" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://storage.ko-fi.com/cdn/logomarkLogo.png"
+      alt="Buy Me a Ko-fi"
+      width="28"
+    />
+  </a>
+</p>
+
+<p>
+  Поддержать проект: <a href="https://ko-fi.com/firststarking" target="_blank" rel="noopener noreferrer">Buy Me a Ko-fi</a>
+</p>
 
 ## � License
 
