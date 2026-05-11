@@ -18,28 +18,6 @@ Nano Manana is an all-in-one creative workstation that brings the power of state
 You can find the latest сompiled binaries for Windows and Linux in the [Releases](https://github.com/nano-manana/nano-banana-ultra-new-ui-333/releases) section.
 
 
-## Screenshots
-
-<p align="center">
-  <img src="./111111111.png" alt="Nano Manana screenshot 1" width="800" />
-</p>
-
-<p align="center">
-  <img src="./222222222222.png" alt="Nano Manana screenshot 2" width="800" />
-</p>
-
-<p align="center">
-  <img src="./33333333.png" alt="Nano Manana screenshot 3" width="800" />
-</p>
-
-<p align="center">
-  <img src="./44444.png" alt="Nano Manana screenshot 4" width="800" />
-</p>
-
-<p align="center">
-  <img src="./555555.png" alt="Nano Manana screenshot 5" width="800" />
-</p>
-
 ### Windows
 *   **Installer**: `Nano Manana Setup X.X.X.exe` - Recommended for most users.
 *   **Portable**: `Nano Manana X.X.X.exe` - Runs without installation.
@@ -107,6 +85,30 @@ The **API Pocket** (or simply "Pocket") provides a centralized way to manage all
 <p>
   Поддержать проект: <a href="https://ko-fi.com/firststarking" target="_blank" rel="noopener noreferrer">Buy Me a Ko-fi</a>
 </p>
+
+
+## Screenshots
+
+<p align="center">
+  <img src="./111111111.png" alt="Nano Manana screenshot 1" width="800" />
+</p>
+
+<p align="center">
+  <img src="./222222222222.png" alt="Nano Manana screenshot 2" width="800" />
+</p>
+
+<p align="center">
+  <img src="./33333333.png" alt="Nano Manana screenshot 3" width="800" />
+</p>
+
+<p align="center">
+  <img src="./44444.png" alt="Nano Manana screenshot 4" width="800" />
+</p>
+
+<p align="center">
+  <img src="./555555.png" alt="Nano Manana screenshot 5" width="800" />
+</p>
+
 
 ## � License
 
