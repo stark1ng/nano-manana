@@ -65,8 +65,8 @@ The **API Pocket** (or simply "Pocket") provides a centralized way to manage all
 
 > **Tip**: The API Pocket allows you to manage multiple API keys and switch between them easily without re-entering credentials each time.
 
-## Поддержать проект
-[![Buy Me a Ko-fi](https://ko-fi.com/api/ko-fi-button.png)](https://ko-fi.com/firststarking)
+## Support Project
+[![Buy Me a Ko-fi](https://storage.ko-fi.com/cdn/logomarkLogo.png)](https://ko-fi.com/firststarking)
 
 
 ## � License
