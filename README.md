@@ -1,120 +1,84 @@
-# NANO MANANA - Powerful AI Image & Video Editor
-
-Nano Manana is an all-in-one creative workstation that brings the power of state-of-the-art AI models directly to your desktop. Designed for artists, designers, and creators, it provides a modular and intuitive interface for complex generative workflows.
-
-## 🚀 Key Features
-
-*   **🎨 Advanced Generation**: Create stunning images with precise control over aspect ratios and models.
-*   **🪄 Seamless Editing**: Modify images using natural language, reference images, and specific elements.
-*   **🖌️ Spot Edit (In-painting)**: Precisely edit specific areas of your images with a built-in canvas editor.
-*   **🎞️ Video Animation**: Generate high-quality videos and animations using the latest Veo models.
-*   **📈 Pro Upscaling**: Enhance your drafts to high-resolution masterpieces with multiple upscaling providers.
-*   **📸 Photosets & Scenarios**: Automate the creation of character-consistent photosets and multi-frame storyboards.
-*   **💾 Local Sync & History**: Keep your work organized with a persistent history and bi-directional folder synchronization.
-*   **🧩 Node-Based API**: Customize your AI pipeline with a powerful node graph system for advanced users.
-
-## 📥 Download
-
-You can find the latest сompiled binaries for Windows and Linux in the [Releases](https://github.com/nano-manana/nano-banana-ultra-new-ui-333/releases) section.
-
-
-### Windows
-*   **Installer**: `Nano Manana Setup X.X.X.exe` - Recommended for most users.
-*   **Portable**: `Nano Manana X.X.X.exe` - Runs without installation.
-
-### Linux
-*   **AppImage**: `Nano Manana-X.X.X.AppImage` - Universal Linux package (make it executable and run).
-*   **DEB**: `nano-manana_X.X.X_amd64.deb` - For Debian/Ubuntu-based distributions.
-
-## 🛠️ Requirements
-
-*   An active internet connection.
-*   A Google Gemini AI Studio API key (free or paid) to power the generative features.
-*   (Optional) Replicate API token for specific upscaling models.
-
-## 🔌 Connecting an API & Getting Started
-
-To start using Nano Manana, you'll need to configure an API connection. Follow the steps below:
-
-### Method 1: Using the Node API System
-
-1. **Select a Settings Folder**: When you first launch the application, select a folder on your computer to store your settings and configuration files.
-
-2. **Navigate to "Node API"**: In the main interface, find and click on the **"Node API"** section from the sidebar or menu.
-
-3. **Choose a Pre-built Scheme**: Look through the available pre-built schemes and select one that includes **Google** (Gemini) or **Replicate** nodes.
-
-4. **Enter Your API Keys**: Click on the API node and enter your API key:
-   - For Google: Get your key from [Google AI Studio](https://aistudio.google.com/)
-   - For Replicate: Get your token from [Replicate](https://replicate.com/)
-
-5. **Start Using It**: Once your API key is saved, you can start generating images and videos immediately.
-
-### Method 2: Using the API Pocket
-
-The **API Pocket** (or simply "Pocket") provides a centralized way to manage all your API credentials:
-
-1. **Open the Pocket**: Look for the **"Pocket"** icon or button in the main interface (usually in the top toolbar or sidebar).
-
-2. **Add a New API Profile**: Click on **"Add API"** or the **+** button to create a new API profile.
-
-3. **Select Provider**: Choose your API provider (Google Gemini, Replicate, etc.) from the dropdown list.
-
-4. **Enter Credentials**: Input your API key or token in the secure field. The Pocket will encrypt and safely store your credentials.
-
-5. **Save and Activate**: Click **"Save"** to store the profile. You can now select this API profile from any node or feature that requires API access.
-
-> **Tip**: The API Pocket allows you to manage multiple API keys and switch between them easily without re-entering credentials each time.
-
-## Support Project
-
-<p>
-  Neural networks are expensive to test and develop. If this project has been helpful to you, please consider supporting it.
-</p>
-
-<p>
-  <a href="https://ko-fi.com/firststarking" target="_blank" rel="noopener noreferrer">
-    <img
-      src="https://storage.ko-fi.com/cdn/logomarkLogo.png"
-      alt="Buy Me a Ko-fi"
-      width="28"
-    />
-  </a>
-</p>
-
-<p>
-  Поддержать проект: <a href="https://ko-fi.com/firststarking" target="_blank" rel="noopener noreferrer">Buy Me a Ko-fi</a>
-</p>
-
-
-## Screenshots
-
 <p align="center">
-  <img src="./111111111.png" alt="Nano Manana screenshot 1" width="800" />
+  <img src="hero.png" alt="Nano Manana" width="100%">
 </p>
 
 <p align="center">
-  <img src="./222222222222.png" alt="Nano Manana screenshot 2" width="800" />
+  <strong>A desktop workstation for AI images and video.</strong><br>
+  Google Gemini and Replicate, one node graph, your own API keys.
 </p>
 
 <p align="center">
-  <img src="./33333333.png" alt="Nano Manana screenshot 3" width="800" />
+  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/download-v0.2.91-7c5cff" alt="Download v0.2.91"></a>
+  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-111" alt="Windows and Linux"></a>
 </p>
+
+Nano Manana is a desktop creative desk. Generate, edit, restore, animate, and upscale without hopping between vendor sites. You bring the keys. The app keeps the workflow, the history, and the routing.
+
+This repository ships **built Electron apps only**. Source is not published here.
+
+## Download
+
+Latest release: **[v0.2.91](https://github.com/stark1ng/nano-manana/releases/tag/v0.2.91)**
+
+| Platform | File | Use it when |
+| --- | --- | --- |
+| Windows | [Nano.Manana.Setup.0.2.91.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.2.91/Nano.Manana.Setup.0.2.91.exe) | You want a normal install |
+| Windows | [Nano.Manana.0.2.91.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.2.91/Nano.Manana.0.2.91.exe) | You want a portable build |
+| Linux | [Nano.Manana-0.2.91.AppImage](https://github.com/stark1ng/nano-manana/releases/download/v0.2.91/Nano.Manana-0.2.91.AppImage) | Any distro. `chmod +x` and run |
+| Linux | [nano-manana_0.2.91_amd64.deb](https://github.com/stark1ng/nano-manana/releases/download/v0.2.91/nano-manana_0.2.91_amd64.deb) | Debian, Ubuntu, Mint |
+
+## The desk
 
 <p align="center">
-  <img src="./44444.png" alt="Nano Manana screenshot 4" width="800" />
+  <img src="generate.png" alt="Generate — prompt, ratio, model, result" width="100%">
 </p>
+
+**Generate.** Prompt, aspect ratio, model. The result stays on a checkerboard canvas with download, edit, and send-on actions.
 
 <p align="center">
-  <img src="./555555.png" alt="Nano Manana screenshot 5" width="800" />
+  <img src="edit.png" alt="Edit — reference image and instructions" width="100%">
 </p>
 
+**Edit.** Drop a reference, write the change, pick the output ratio.
 
-## � License
+<p align="center">
+  <img src="spot-edit.png" alt="Spot Edit — paint a region and describe the change" width="100%">
+</p>
 
-Nano Manana is distributed as **Freeware**. It is free to download and use for personal and commercial purposes. 
+**Spot Edit.** Paint the region. The rest of the picture stays put.
 
-**Note on Source Code**: The source code of this application is proprietary and closed. Redistribution or modification of the software is not permitted without explicit permission from the Nano Team. See the `LICENSE` file for full terms.
+The same shell also holds Restoration, Scenarios, Photoset, Chat, Animate, Upscale, Tools, and History.
 
----
-Created with ❤️ by Nano Team.
+## What 0.2.91 changes
+
+Last public build was **v0.1.94**. This one is the current desk.
+
+- **Obsidian** is the skin on a fresh start and after Reset settings. Classic, Modern, and Lando are still in Appearance.
+- **Main** is the default Node API profile when nothing is saved yet. Google and Replicate are already wired. Every catalog model for those two providers is connected to the section it belongs to. Labels are in English.
+- **Magic Prompt** is in that profile: Gemini 2.5 Flash in, and out to Generate, Edit, Photoset, Scenarios, Animate, and Upscale.
+- Windows installer, Windows portable, Linux AppImage, and Debian package are all in this release.
+
+## Connect an API
+
+You need a network connection and at least one key.
+
+1. On first launch, pick a folder if you want settings and history on disk. You can skip it and stay in the app.
+2. Open **Node API**. The Main profile is the starting map.
+3. Click the **Google** provider and paste a key from [Google AI Studio](https://aistudio.google.com/).
+4. Click the **Replicate** provider and paste a token from [replicate.com/account/api-tokens](https://replicate.com/account/api-tokens).
+5. Press **Active**. Sections then list only the models wired in the graph.
+
+**API Pocket** stores extra keys so you can load one onto a provider node instead of retyping it.
+
+Google covers image, chat, and Veo. Replicate covers Nano Banana, Ideogram-class generate, video, and the upscale list. Local and Vertex are not in the default profile.
+
+## Requirements
+
+- Windows 10/11 x64, or a current 64-bit Linux desktop
+- Internet access while you generate
+- A Google AI Studio key
+- A Replicate token if you want those models
+
+## License
+
+Nano Manana is freeware for personal and commercial use. The source is not part of this repository. Redistribution of modified builds is not permitted. See the app license on first launch.
