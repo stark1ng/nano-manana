@@ -12,6 +12,10 @@
   <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-111" alt="Windows and Linux"></a>
 </p>
 
+> **Alpha.** This is an early build. Every release works end to end, but sections still move between versions and behaviour gets settled as they do. Keep your own copies of anything you care about.
+>
+> **Windows signing.** The installer and the portable exe are not code signed yet, so SmartScreen warns once: press **More info**, then **Run anyway**. Code signing is planned.
+
 Nano Manana is a desktop creative desk. Generate, edit, restore, animate, and upscale without hopping between vendor sites. You bring the keys. The app keeps the workflow, the history, and the routing.
 
 This repository ships **built Electron apps only**. Source is not published here.
