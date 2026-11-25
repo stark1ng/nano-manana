@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/download-v0.3.13-7c5cff" alt="Download v0.3.13"></a>
+  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/download-v0.3.25-7c5cff" alt="Download v0.3.25"></a>
   <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-111" alt="Windows and Linux"></a>
 </p>
 
@@ -22,16 +22,16 @@ This repository ships **built Electron apps only**. Source is not published here
 
 ## Download
 
-Latest release: **[v0.3.13](https://github.com/stark1ng/nano-manana/releases/tag/v0.3.13)**
+Latest release: **[v0.3.25](https://github.com/stark1ng/nano-manana/releases/tag/v0.3.25)**
 
 | Platform | File | Use it when |
 | --- | --- | --- |
-| Windows | [Nano.Manana.Setup.0.3.13.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.13/Nano.Manana.Setup.0.3.13.exe) | You want a normal install |
-| Windows | [Nano.Manana.0.3.13.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.13/Nano.Manana.0.3.13.exe) | You want a portable build |
-| Linux | [Nano.Manana-0.3.13.AppImage](https://github.com/stark1ng/nano-manana/releases/download/v0.3.13/Nano.Manana-0.3.13.AppImage) | Any distro. `chmod +x` and run |
-| Linux | [nano-manana_0.3.13_amd64.deb](https://github.com/stark1ng/nano-manana/releases/download/v0.3.13/nano-manana_0.3.13_amd64.deb) | Debian, Ubuntu, Mint |
+| Windows | [Nano.Manana.Setup.0.3.25.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana.Setup.0.3.25.exe) | You want a normal install |
+| Windows | [Nano.Manana.0.3.25.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana.0.3.25.exe) | You want a portable build |
+| Linux | [Nano.Manana-0.3.25.AppImage](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana-0.3.25.AppImage) | Any distro. `chmod +x` and run |
+| Linux | [nano-manana_0.3.25_amd64.deb](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/nano-manana_0.3.25_amd64.deb) | Debian, Ubuntu, Mint |
 
-From **0.3.13** the app updates itself: **Settings → Updates** compares the build with this page, downloads the new file, and restarts into it. The Windows installer and the Linux AppImage can do that in place. The portable EXE and the DEB cannot replace themselves, so for those the panel opens this page.
+Since **0.3.13** the app updates itself: **Settings → Updates** compares the build with this page, downloads the new file, and restarts into it. The Windows installer and the Linux AppImage can do that in place. The portable EXE and the DEB cannot replace themselves, so for those the panel opens this page.
 
 ## The desk
 
@@ -55,21 +55,39 @@ From **0.3.13** the app updates itself: **Settings → Updates** compares the bu
 
 The same shell also holds Restoration, Scenarios, Photoset, Chat, Animate, Upscale, Tools, and History.
 
-## What 0.3.13 changes
+## Themes
 
-Last public build was **v0.2.91**. This one adds in-app updates.
+**Settings → Appearance** carries five skins, each with a light and a dark variant:
 
-- **Settings → Updates** shows the version you are running, the newest release on this page, and one button to get it. The check runs quietly in the background once an hour; nothing is downloaded until you press **Download**.
-- **Download, install, restart:** progress is real bytes, the file is checked before it is used, and the app replaces itself and comes back on the new build. AppImage on Linux, installer on Windows.
-- **A dot next to the Settings tab** appears when a newer release is out, so you notice it without opening the panel.
-- The panel and its notes follow the interface language (English / Russian) and switch live.
+| Skin | Character |
+| --- | --- |
+| **Classic** | The original grey-blue desk |
+| **Modern** | Neutral zinc, flat surfaces, no colour cast |
+| **Obsidian** | Violet-black, deep contrast — the skin a fresh install starts on |
+| **Lando** | Warm olive and cream, lime accents |
+| **Motion** | Indigo-black with violet accents, spring transitions, staggered entrances and hover lift |
 
-From 0.2.91, still in place:
+A skin is not just a palette swap: every section, panel, picker, portal menu, modal and the **Node API graph** follow it. As of 0.3.25 the graph has its own light palette per skin — a mid-tone canvas with lighter panels and near-white nodes, instead of a dark canvas behind a light window.
 
-- **Obsidian** is the skin on a fresh start and after Reset settings. Classic, Modern, and Lando are still in Appearance.
-- **Main** is the default Node API profile when nothing is saved yet. Google and Replicate are already wired. Every catalog model for those two providers is connected to the section it belongs to. Labels are in English.
-- **Magic Prompt** is in that profile: Gemini 2.5 Flash in, and out to Generate, Edit, Photoset, Scenarios, Animate, and Upscale.
-- Windows installer, Windows portable, Linux AppImage, and Debian package.
+## What 0.3.25 changes
+
+This release is the theme pass. Every skin was measured in both modes across all 12 sections — text colour against its real background, not eyeballed.
+
+- **Classic, light mode.** Console panels (Activity Log, Budget, Updates) were painted with dark-only tokens: buttons measured 1.1–1.3:1, effectively invisible. They now have a light token set of their own, and muted text, hotkey chips, placeholders and the red Reset button clear 4.5:1.
+- **Modern.** The skin is zinc, but shared chrome and Tailwind's slate greys painted it blue. The grey scale is re-pointed to zinc inside the skin, so drop zones, panels, pickers and selects sit in one family.
+- **Obsidian.** Base grey classes were mapped to the violet-black scale, but the semi-transparent variants and several hand-written slate values were not — pickers, queue cards, toasts and dropdown panels stayed blue against a violet canvas. All mapped now, plus violet console tokens in both modes.
+- **Lando.** Its colour block remapped grey text without scoping it to dark mode, so dark surfaces got dark text: the zoom **Default** button measured 1.28:1 and the **Updates** title 1.15:1. Fixed in dark, and the light theme got its muted, red and accent lifts.
+- **Motion.** Dark mode was already uniform; light mode had washed-out hints, scale ticks, hotkey digits, and a lime caption at 1.92:1 on cream. Fixed.
+- **Node API graph, light mode.** Portaled menus — model and Model+ pickers, the node gear panel, API Pocket keys, grid options, Share / Backup, the align toolbar and the **Edit pool** / **Section** modals — are rendered outside the graph container, so they kept dark slate chrome (“open a menu and everything goes black”). They follow the skin now. Light-accent labels inside node bodies were invisible on white and are darkened inside the graph.
+- **Grid tool.** The caption no longer carries a black letter outline in light mode, the frame is a 1px soft border instead of a 2px accent ring, and its options menu takes its colours from variables instead of hardcoded white-on-black.
+- **Transfer menu** (“To Generate / To Edit / …”) stopped being Tailwind slate in every dark theme: Motion and Modern get their own chrome, Classic keeps slate by design.
+
+From 0.3.13, still in place:
+
+- **Settings → Updates** shows the build you are running, the newest release here, and one button to get it — progress is real bytes, the file is checked, then the app replaces itself and comes back.
+- **A dot next to the Settings tab** when a newer release is out.
+- **Main** is the default Node API profile: Google and Replicate wired, every catalog model connected to its section.
+- **Magic Prompt** in that profile: Gemini 2.5 Flash in, out to Generate, Edit, Photoset, Scenarios, Animate and Upscale.
 
 ## Connect an API
 
@@ -91,6 +109,8 @@ Google covers image, chat, and Veo. Replicate covers Nano Banana, Ideogram-class
 - Internet access while you generate
 - A Google AI Studio key
 - A Replicate token if you want those models
+
+macOS is not published yet: a macOS build has to be produced and signed on macOS, it cannot be cross-built from Linux.
 
 ## License
 
