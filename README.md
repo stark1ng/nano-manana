@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/download-v0.3.25-7c5cff" alt="Download v0.3.25"></a>
+  <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/download-v0.3.28-7c5cff" alt="Download v0.3.28"></a>
   <a href="https://github.com/stark1ng/nano-manana/releases/latest"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-111" alt="Windows and Linux"></a>
 </p>
 
@@ -22,14 +22,14 @@ This repository ships **built Electron apps only**. Source is not published here
 
 ## Download
 
-Latest release: **[v0.3.25](https://github.com/stark1ng/nano-manana/releases/tag/v0.3.25)**
+Latest release: **[v0.3.28](https://github.com/stark1ng/nano-manana/releases/tag/v0.3.28)**
 
 | Platform | File | Use it when |
 | --- | --- | --- |
-| Windows | [Nano.Manana.Setup.0.3.25.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana.Setup.0.3.25.exe) | You want a normal install |
-| Windows | [Nano.Manana.0.3.25.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana.0.3.25.exe) | You want a portable build |
-| Linux | [Nano.Manana-0.3.25.AppImage](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/Nano.Manana-0.3.25.AppImage) | Any distro. `chmod +x` and run |
-| Linux | [nano-manana_0.3.25_amd64.deb](https://github.com/stark1ng/nano-manana/releases/download/v0.3.25/nano-manana_0.3.25_amd64.deb) | Debian, Ubuntu, Mint |
+| Windows | [Nano.Manana.Setup.0.3.28.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.28/Nano.Manana.Setup.0.3.28.exe) | You want a normal install |
+| Windows | [Nano.Manana.0.3.28.exe](https://github.com/stark1ng/nano-manana/releases/download/v0.3.28/Nano.Manana.0.3.28.exe) | You want a portable build |
+| Linux | [Nano.Manana-0.3.28.AppImage](https://github.com/stark1ng/nano-manana/releases/download/v0.3.28/Nano.Manana-0.3.28.AppImage) | Any distro. `chmod +x` and run |
+| Linux | [nano-manana_0.3.28_amd64.deb](https://github.com/stark1ng/nano-manana/releases/download/v0.3.28/nano-manana_0.3.28_amd64.deb) | Debian, Ubuntu, Mint |
 
 Since **0.3.13** the app updates itself: **Settings → Updates** compares the build with this page, downloads the new file, and restarts into it. The Windows installer and the Linux AppImage can do that in place. The portable EXE and the DEB cannot replace themselves, so for those the panel opens this page.
 
@@ -69,7 +69,21 @@ The same shell also holds Restoration, Scenarios, Photoset, Chat, Animate, Upsca
 
 A skin is not just a palette swap: every section, panel, picker, portal menu, modal and the **Node API graph** follow it. As of 0.3.25 the graph has its own light palette per skin — a mid-tone canvas with lighter panels and near-white nodes, instead of a dark canvas behind a light window.
 
-## What 0.3.25 changes
+## What 0.3.28 changes
+
+This release is **Simple mode**. The node graph is still the only engine — Simple assembles a graph for you from the API Pocket keys and shows it as provider cards with model toggles instead of a canvas.
+
+- **A card is a Pocket key.** Paste a key and every section is wired in one step; two keys for one provider become failover.
+- **The Pocket is the only wallet.** The old per-category list is read once on first launch and copied across.
+- **Simple is a template.** Its graph is read-only on the canvas; **Duplicate & edit** forks it into «Simple (my)» and the original stays pristine.
+- **Mode and profile are independent.** Picking a profile in the list changes what routes, not what you see; the canvas comes back only on **Graph** or **Activate**, and the state is spelled out (`● Active · Simple`, `● Active`, `Activate`).
+- **Per-profile section defaults**, so a model picked in Advanced no longer changes what Simple runs.
+- **Magic Prompt and the client-side upscaler** are part of every Simple graph.
+- **Model panel**: a `15 / 109` counter, **All / None** that honour the search, and role chips showing the sections each model can serve. The seed is up to 15 models per provider — cheapest per section first, upscale and video capped at two each.
+
+Fixed while testing it: the canvas could write the Advanced node set into the Simple profile on unmount; Graph with no user profile sat on the Simple graph; the Active badge depended on the view flag; creating a profile left you in Simple.
+
+## What 0.3.25 changed
 
 This release is the theme pass. Every skin was measured in both modes across all 12 sections — text colour against its real background, not eyeballed.
 
@@ -94,14 +108,15 @@ From 0.3.13, still in place:
 You need a network connection and at least one key.
 
 1. On first launch, pick a folder if you want settings and history on disk. You can skip it and stay in the app.
-2. Open **Node API**. The Main profile is the starting map.
-3. Click the **Google** provider and paste a key from [Google AI Studio](https://aistudio.google.com/).
-4. Click the **Replicate** provider and paste a token from [replicate.com/account/api-tokens](https://replicate.com/account/api-tokens).
-5. Press **Active**. Sections then list only the models wired in the graph.
+2. Open **Node API** — the mode is **Simple**.
+3. Paste a key from [Google AI Studio](https://aistudio.google.com/) into the **API Pocket** on the right. A provider card appears with its models already connected to every section; add a [Replicate](https://replicate.com/account/api-tokens) token the same way.
+4. Click a card to switch models on and off. The list is cheapest-first, and the chips on each model are the sections it can serve.
 
-**API Pocket** stores extra keys so you can load one onto a provider node instead of retyping it.
+Simple mode is the same node graph, assembled from your Pocket keys — not a separate engine. **Graph** opens the full canvas (several keys, failover order, Schema URL, custom models). The Simple graph is a template there: edit it with **Duplicate & edit**, and the original stays as the default.
 
-Google covers image, chat, and Veo. Replicate covers Nano Banana, Ideogram-class generate, video, and the upscale list. Local and Vertex are not in the default profile.
+**API Pocket** is the only place keys live; the old per-category key list is read once, on first launch, and copied into it.
+
+Google covers image, chat, and video. Replicate covers Nano Banana, Flux-class generate, video, and the upscale list. Local ships the client-side upscaler with no key at all.
 
 ## Requirements
 
